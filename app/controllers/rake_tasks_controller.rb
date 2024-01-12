@@ -8,7 +8,7 @@ class RakeTasksController < ApplicationController
     def execute
       # task = params[:task]
       task_name = params[:task].to_s.strip
-      allowed_tasks = ["my_safe_task1", "my_safe_task2"] # Define allowed tasks  
+      allowed_tasks = ["plug_test", "my_safe_task2"] # Define allowed tasks  
 
       if allowed_tasks.include?(task_name)
         output = `RAILS_ENV=#{Rails.env} bundle exec rake #{task_name}`
