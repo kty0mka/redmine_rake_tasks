@@ -1,8 +1,8 @@
 class RakeTasksController < ApplicationController
-  # include Redmine::I18n
+    include Redmine::I18n
     before_action :require_admin
   
-    # accept_api_auth :execute_task
+    accept_api_auth :execute
     # before_action :require_permission
   
     def execute
